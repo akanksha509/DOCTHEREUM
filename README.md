@@ -1,53 +1,39 @@
 # Docthereum 🩺
-A dapp to maintain anonymous medical reports and aid seamless healthcare across the globe 🌎.
-<p align="left">
-  <img width="70%" src="https://i.ibb.co/y5DQz8r/Screenshot-84.png">
-</p>
+A decentralized application (dApp) designed to maintain anonymous medical reports and enhance healthcare accessibility globally 🌎.
 
-## The problem it solves
-## 1. Storage 📂
-  The traditional method of keeping records that is followed in most of the hospitals across India is the manual method 
-  involving papers and books. There are serious limitations of manual record keeping including the need for large storage 
-  areas and difficulties in the retrieval of records.And the possibility of easy manipulation without detection is a serious 
-  concern.
-=> **Docthereum stores records over decentralised network and records cannot be tampered with.** 
+## How Docthereum Enhances Healthcare
 
-## 2. Anonymity 🎭
-Another major concern is maintaining confidentiality of the patient records as the patient can hold the doctor and the 
-  hospital negligent for breaking confidentiality of his medical records
-=> **We maintain the records linked to patients Ethereum's public address, hence providing anonymity to the patient.
-  And the identity of patient remains confidential.**
+### 1. **Efficient Storage 📂**
+Hospitals and healthcare institutions traditionally rely on paper-based records, which require significant storage space and are prone to errors, loss, or tampering. Searching for specific records can be slow and inefficient.  
+**Solution:** Docthereum leverages decentralized storage, ensuring that medical records are securely stored in a digital format. This system is tamper‑proof, easy to retrieve, and removes the need for physical storage, improving accessibility and reducing the risk of manipulation.
 
-## 3. Research 👩‍🔬
-Research includes increased efforts to use stored medical records as a source of data for health services, epidemiologic, and clinical studies. Given that it can be cumbersome, if not impossible, to find and seek consent from patients whose current or past records might be used.
-=>**Since, we maintain our reports anonymously, and they cant be traced back to the patient himself, they can be provided to researchers to aid in their studies.**
+### 2. **Patient Privacy 🎭**
+Maintaining the confidentiality of patient records is crucial in healthcare. Breaches of privacy can have severe legal and reputational consequences for both hospitals and patients.  
+**Solution:** By linking medical records to a patient’s Ethereum public address, Docthereum keeps identities anonymous. Only the patient controls their data, guaranteeing confidentiality and reducing the risk of unauthorized access.
 
+### 3. **Enabling Medical Research 👩‍🔬**
+Medical research often relies on large data sets from patient records, but obtaining consent can be cumbersome and time‑consuming.  
+**Solution:** Because Docthereum anonymizes data at the source, aggregated medical information can be shared with researchers without violating patient privacy, accelerating progress in public health and clinical studies.
 
-## Challenges we ran into
-## 1. Verification 🕵️‍♂️
-We had a big problem on how to verify the Doctors and labs without the need of including a 3rd party and at the same time make the process as seamless as possible.
-### Solution :- 
-**We ask doctors or labs for their registration id , which we then use to verify them against an api that 
-verifies them. Using Chainlink, we were able to integrate this functionality into our smart contract , thus making the 
-verification process seamless**
+## Key Challenges & Solutions
 
-## 2. Different testnets 
-While developing the dapp , we noticed that Chainlink's rinkeby network was in maintainence and we would have to use Kovan network. But soon we realised that the subgraph we were building for the dapp doesnt not support deploying on Kovan network currently.
-### Solution :-
-**We decided to make two instances of the project and deploy the smart contract on both  
-Rinkeby [0xa6a11dF4FAc5c4b148bC91f03FD0919237d16801](https://github.com/devstardude/Docthereum/blob/master/packages/contracts/docthereum.sol)  
-And Kovan [0x6DdD958591974891eD4819cDF9a269DaEc3C55A7](https://github.com/devstardude/Docthereum/blob/master/packages/contracts/docthereum-kovan.sol).  
-So we were able to test the verification functionality on Kovan , all while deploying the subgrapgh on Rinkeby to index the Rinkeby version of the smart contract.**
+### 1. **Verification 🕵️‍♂️**
+Verifying doctors and labs without a centralized third party.  
+**Solution:** Doctors and labs submit their registration IDs, which are verified via an external API. Chainlink oracles feed the result directly into the smart contract, keeping the process decentralized and tamper‑resistant.
 
-**Note :-** currently the dapp calls the instance deployed on Rinkeby network.
+### 2. **Testnet Compatibility**
+Chainlink’s Rinkeby oracle network was under maintenance, while The Graph didn’t yet support Kovan.  
+**Solution:** Smart contracts were deployed on both Rinkeby (for indexing) and Kovan (for testing oracle verification), allowing uninterrupted development.  
+*Note: the live dApp currently interacts with the Rinkeby contract.*
 
-## Technologies we used
-#### 1. Solidity  
-#### 2. IPFS    
-#### 3. TheGraph 
-#### 4. Chainlink 
-#### 5. React 
-#### 6. Web3 
+## Technologies Used
+- **Solidity** – Ethereum smart contracts  
+- **IPFS** – decentralized file storage  
+- **The Graph** – blockchain indexing & querying  
+- **Chainlink** – decentralized oracles for external data  
+- **React** – front‑end framework  
+- **Web3.js** – JavaScript library for Ethereum interaction
 
 
-## Test live 🚀 :- https://docthereum.web.app/
+## Test the Live dApp 🚀
+Try Docthereum on the web: <https://docthereum.web.app/>
