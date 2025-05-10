@@ -34,6 +34,3 @@ Chainlink’s Rinkeby oracle network was under maintenance, while The Graph didn
 - **React** – front‑end framework  
 - **Web3.js** – JavaScript library for Ethereum interaction
 
-
-## Test the Live dApp 🚀
-Try Docthereum on the web: <https://docthereum.web.app/>
